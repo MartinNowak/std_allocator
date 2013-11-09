@@ -4399,6 +4399,8 @@ class CAllocatorImpl(Allocator) : CAllocator
     static if (stateSize!Allocator) Allocator impl;
     else alias impl = Allocator.it;
 
+override:
+
     /// Returns $(D impl.alignment).
     @property uint alignment()
     {
